@@ -1,0 +1,31 @@
+﻿@model IEnumerable<MobileComputers>
+
+@using (Html.BeginForm("List", "MobileComputers", FormMethod.Get))
+{
+
+    <p4>Pretraga po modelu: </p4>@Html.TextBox("name", "", new { style = "width:200px;height:35px" })
+    <input type="submit" value="Pretraži" class="btn btn-primary" />
+}
+
+<div>
+    <table class="styled-table">
+        <thead>
+            <tr>
+                <th width="100px">Marka</th>
+                <th width="110px">Model</th>
+                <th width="150px">Part Number</th>
+                <th width="290px">Opis</th>
+                <th width="100px">Trenutno na stanju</th>
+                <th width="120px">Cena</th>
+                <th width="60px"></th>
+                <th width="150px"></th>
+            </tr>
+        </thead>
+    </table>
+    @foreach (var MobileComputers in Model)
+    {
+        <partial name="_MobileComputer" model="MobileComputers" />
+    }
+</div>
+
+

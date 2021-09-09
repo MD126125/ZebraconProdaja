@@ -1,0 +1,21 @@
+﻿@model IEnumerable<CbModel>
+
+<table>
+    <tr>
+        <td>
+            <div>
+                <p2><label for="Model">Izaberite uređaj:</label></p2>
+            </div>
+        </td>
+        <td>
+            <div>
+                <select name="Model" class="a">
+                    @foreach (var CbModel in Model)
+                    {
+                    <option value=@CbModel.Name>@CbModel.CbBrand.Name @CbModel.Name</option>
+                    }
+                </select>
+            </div>
+        </td>
+    </tr>
+</table>

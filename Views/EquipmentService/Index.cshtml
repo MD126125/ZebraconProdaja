@@ -1,0 +1,24 @@
+﻿@{
+}
+<div class="b"><p1>SERVIS UREĐAJA</p1></div>
+<div class="b"><p> - Bavimo se servisiranjem termalnih štampača i mobilnih terminala - </p></div>
+<div class="b"><p> Ukoliko vam je potrebna opravka uređaja ili nabavka rezervnog dela možete nam poslati zahtev za opravkom ili nabavkom rezervnog dela, a mi ćemo vam odgovoriti u najkraćem mogućem roku.</p></div>
+
+<hr align="center" color="#70dbd4">
+
+@await Component.InvokeAsync("CbModelMenu")
+
+<p><label for="Description">Unesite opis kvara:</label></p>
+<p>
+    <textarea id="Description" name="MalfunctionDescription"
+              rows="5" cols="180">
+</textarea>
+</p>
+<p>
+    <label for="sparePart">Željeni rezervni deo:</label>
+
+<textarea id="sparePart" name="sparePart"
+          rows="5" cols="180">
+</textarea>
+</p>
+<div width="250px"><button class="btn btn-primary">Pošaljite zahtev</button></div>

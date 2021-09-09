@@ -1,0 +1,47 @@
+﻿@model ZebraconProdaja.ViewModels.ShoppingCartViewModel
+
+<h2>Vaša korpa</h2>
+<div>
+    <table class="styled-table">
+        <thead>
+            <tr>
+                <th width="180px">Broj</th>
+                <th width="180px">Marka</th>
+                <th width="180px">Model</th>
+                <th width="180px">Cena</th>
+                <th width="180px">Ukupno</th>
+            </tr>
+        </thead>
+    </table>
+</div>
+<div>
+    <table class="styled-table">
+        <tbody>
+            @foreach (var item in Model.ShoppingCart.ShoppingCartItems)
+            {
+<tr>
+    <td width="180px" align="center">@item.Amount</td>
+    <td width="180px" align="center">@item.ThermalPrinters.Id</td>
+    <td width="180px" align="center">@item.ThermalPrinters.Id</td>
+    <td width="180px" align="center">@item.ThermalPrinters.Price.ToString("c")</td>
+    <td width="180px" align="center">
+        @((item.Amount * item.ThermalPrinters.Price).ToString("c"))
+    </td>
+</tr>
+}
+        </tbody>
+    </table>
+</div>
+<div>
+    <table class="styled-table">
+        <tbody>
+            <tr>
+
+                <td width="900px" align="right">
+                    <p>Total</p>@Model.TotalAmount.ToString("c")
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div width="250px"><button class="btn btn-primary">Završite kupovinu</button></div>

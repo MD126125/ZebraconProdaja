@@ -1,0 +1,36 @@
+﻿    @model IEnumerable<BarcodeScanners>
+    <div>
+        <table class="styled-table">
+            <thead>
+                <tr>
+                    <th width="100px">Marka</th>
+                    <th width="110px">Model</th>
+                    <th width="150px">Part Number</th>
+                    <th width="290px">Opis</th>
+                    <th width="100px">Trenutno na stanju</th>
+                    <th width="120px">Cena</th>
+                    <th width="60px"></th>
+                    <th width="150px"></th>
+                </tr>
+            </thead>
+        </table>
+        @foreach (var BarcodeScanners in Model)
+        {
+        <div>
+            <table class="styled-table">
+                <tbody>
+                    <tr>
+                        <td width="100px" align="center">@BarcodeScanners.CbBrand.Name</td>
+                        <td width="110px" align="center">@BarcodeScanners.CbModel.Name</td>
+                        <td width="150px" align="center">@BarcodeScanners.PartNumber</td>
+                        <td width="290px" align="center">@BarcodeScanners.Description</td>
+                        <td width="100px" align="center">@BarcodeScanners.CurrentNumber</td>
+                        <td width="120px" align="center">@BarcodeScanners.Price.ToString("c")</td>
+                        <td width="60px" align="center"><img src="@BarcodeScanners.Image" width="60" /></td>
+                        <td width="120px" align="center"><button class="btn btn-primary">Dodaj u korpu</button>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        }
+    </div>

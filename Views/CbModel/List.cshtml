@@ -1,0 +1,10 @@
+﻿@model IEnumerable<CbModel>
+<div>
+    @foreach (var CbModel in Model)
+    {
+    <div>
+        <h2>@CbModel.Id</h2>
+        <h3>@CbModel.Name</h3>
+    </div>
+    }
+</div>

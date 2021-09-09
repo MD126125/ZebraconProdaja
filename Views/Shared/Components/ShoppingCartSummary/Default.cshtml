@@ -1,0 +1,13 @@
+﻿@model ZebraconProdaja.ViewModels.ShoppingCartViewModel
+
+@if (Model.ShoppingCart.ShoppingCartItems.Count > 0)
+{
+     <li class="nav-item">
+         <a class="nav-link text-dark">
+             <span class="fas fa-shopping-cart"></span>
+             <span id="cart-status">
+                 <p3 width: 100px; text-align: left;>Broj artikala u korpi:  </p3>@Model.ShoppingCart.ShoppingCartItems.Count
+             </span>
+         </a>
+     </li>
+}
